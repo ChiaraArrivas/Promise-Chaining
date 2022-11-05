@@ -31,9 +31,9 @@ function secondPromise(number) {
 firstPromise(isLogged)   //first promise
     .then((random) => {
         console.log(random)  //mostrami il numero random
-        return random;       //restituisci alla second promis il numero random
+        return random;       //restituisci alla second promise il numero random
     })
     .then((number) => secondPromise(number))  //Stamperà a seconda del numero random
-    .then((user) => console.log(user))       // Quando la second promis da il via allora stamperà l'user di firstPromise, altrimenti reject di secondPromise
-    .catch((err) => console.error(err.message))         //Cattura e stampa errore
+    .then((user) => console.log(user))       // Quando la second promise da il via allora stamperà l'user di firstPromise, altrimenti reject di secondPromise
+    .catch((err) => console.error(err.message))       //Cattura e stampa errore
     
